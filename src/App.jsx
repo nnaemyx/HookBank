@@ -18,9 +18,6 @@ import { Home } from './pages/Home';
 
 
 const App = () => (
-
-
-
   <div className='bg-primary w-full overflow-hidden'>
 
     <Routes>

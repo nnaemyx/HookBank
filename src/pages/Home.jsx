@@ -10,7 +10,8 @@ import {
     Testimonials,
     Clients,
     CTA,
-} from './components';
+    Footer
+} from '../components';
 
 export const Home = () => {
     return (
