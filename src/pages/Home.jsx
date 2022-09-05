@@ -9,8 +9,7 @@ import {
     CardDeal,
     Testimonials,
     Clients,
-    CTA,
-    Footer
+    CTA
 } from '../components';
 
 export const Home = () => {
@@ -32,7 +31,6 @@ export const Home = () => {
                     <Testimonials />
                     <Clients />
                     <CTA />
-                    <Footer />
                 </div>
             </div>
         </Fragment>
