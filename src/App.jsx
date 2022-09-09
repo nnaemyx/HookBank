@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import { Home } from './pages/Home';
 
 
@@ -10,6 +12,8 @@ const App = () => (
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
       </Route>
+      <Route path='/signup' element={<Signup />} />
+      <Route path='/login' element={<Login />} />
     </Routes>
 
   </div>
