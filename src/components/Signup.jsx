@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+import Toast from "./Toast";
 
 
 
@@ -7,7 +8,7 @@ function Signup() {
   return (
     <>
       <div className="h-screen">
-        <section className='heading text-center pt-[5rem]  text-white'>
+        <section className='heading text-center pt-[-5rem]  text-white'>
           <h1 className=" gap-4 pt-2 text-center">
             Register
           </h1>
@@ -67,6 +68,7 @@ function Signup() {
             </div>
           </form>
           <p className="text-white">Already Have an account yet?<Link to="/login" className='text-green-400 p-2'>Login</Link></p>
+          <Toast/>
         </section>
       </div>
       
