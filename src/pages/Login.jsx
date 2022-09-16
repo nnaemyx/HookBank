@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form';
+import { useAuthContext } from '../context/auth.context';
 import Spinner from '../components/Spinner'
 
 const Login = () => {

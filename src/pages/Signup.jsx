@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom'
+import { useAuthContext } from '../context/auth.context';
 import Toast from '../components/Toast';
 import Spinner from '../components/Spinner';
 
@@ -28,7 +29,7 @@ function Signup() {
                 required
                 type='text'
                 className='form-control'
-                id='name'
+                id='firstName'
                 placeholder='First Name'
                 {...register('firstName', { required: 'FIRST NAME REQUIRED', minLength: 1 })}
               />
@@ -40,7 +41,7 @@ function Signup() {
                 required
                 type='text'
                 className='form-control'
-                id='name'
+                id='lastName'
                 placeholder='Last Name'
                 {...register('lastName', { required: 'LAST NAME REQUIRED', minLength: 1 })}
               />

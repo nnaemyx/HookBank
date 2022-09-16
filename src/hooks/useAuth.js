@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { User } from '../data/user'
 
 import { backEndHost } from '../constants/api';
 
 export const useAuthProvider = () => {
 
-    const [authToken, setAuthToken] = useState<string>('');
-    const [isError, setIsError] = useState<string>('');
-    const [loading, setLoading] = useState<boolean>(false);
+    const [authToken, setAuthToken] = useState('');
+    const [isError, setIsError] = useState('');
+    const [loading, setLoading] = useState(false);
     const [user, setUser] = useState(new User());
-    const [success, setSuccess] = useState<boolean>(false)      //used to track registration success
+    const [success, setSuccess] = useState(false)      //used to track registration success
 
     const axiosInstance = axios.create({
         baseURL: `${backEndHost}`,
@@ -24,7 +25,7 @@ export const useAuthProvider = () => {
 
             const { data } = await axiosInstance.post('/auth/login', signInData);
 
-            setAuthToken(data.authToken);
+            setAuthToken(data?.authToken);
             setTimeout(() => callback(), 100);  // redirects the user after success login on server side
             setIsError('')
 
@@ -126,10 +127,10 @@ export const useAuthProvider = () => {
                     originalRequest._retry = true;
 
                     try {
-                        
+
                         const newAccessToken = await refreshToken();
                         originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
-                        
+
                         return axiosInstance(originalRequest);
                     } catch (_error) {
                         if (_error.response && _error.response.data) {
