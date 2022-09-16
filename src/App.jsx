@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
-import Login from './components/Login';
-import Signup from './components/Signup';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import { Home } from './pages/Home';
 
 
