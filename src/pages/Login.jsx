@@ -28,6 +28,7 @@ const Login = () => {
 
             <div className='form-group'>
               <input
+                required
                 type='email'
                 className='form-control'
                 id='email'
@@ -38,6 +39,7 @@ const Login = () => {
             </div>
             <div className='form-group'>
               <input
+                required
                 type='password'
                 className='form-control'
                 id='password'
